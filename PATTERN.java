@@ -4,19 +4,55 @@ public class PATTERN
 {
     static String pattern;
     static String choice;
-    
-   static Scanner as = new Scanner( System.in);
+    static Scanner as = new Scanner( System.in);
+    static String arr[]= { "PYRAMID PATTERN","RIGHT HALF PYRAMID PATTERN", "LEFT HALF PYRAMID PATTERN" , "CHARACTER HALF PYRAMID PATTERN" , 
+                         "ALPHABETS HALF PYRAMID PATTERN" ,"NUMBERS HALF PYRAMID PATTERN", "NUMBERS HALF INVERTED PYRAMID PATTERN" , 
+                         "FLYOD'S TRIANGLE PATTERN"  , "0-1 TRAIANGLE PATTERN", "HOLLOW RECTANGLE PATTERN" , " HOLLOW RHOMBUS PATTERN" ,  "SOLID RHOMBUS PATTERN"
+                          , "BUTTERFLY PATTERN" , "DIAMOND PATTERN" , "SAME NUMBERS IN VERTICAL PYRAMID PATTERN" ,""};
+    static int SERIALNO;
 
-    public static void welcome ()
+   public static void welcome ()
     {   int i = 1; 
         if( i==1)
         {
         System.out.println("WELCOME TO FUN TO PATTERNS \n HERE IS THE LIST OF THE PATTENS U CAN CHOOSE TO KNOW ABOUT OR GET AN EXAMPLE OR DRAW OF DESIRED SIZE");
         i++;
         }
+
+        else
+        {
+            System.out.println("CHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); i++;
+        }
         System.out.println();// add the patterns here 
-        System.out.println("ENTER THE NAME OF THE PATTERN YOU ARE INTRESTED IN");
-         pattern=(as.nextLine()).toUpperCase();
+        System.out.println("ENTER THE NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
+        pattern=(as.nextLine()).toUpperCase();
+
+        if (pattern == "1" ||pattern == "2" ||pattern == "3" ||pattern == "4" ||pattern == "5" ||pattern == "6" ||pattern == "7" || pattern == "8" ||
+            pattern == "9" ||pattern == "10" ||pattern == "11" ||pattern == "12" ||pattern == "13" ||pattern == "14" ||pattern == "15"  );
+            {
+              SERIALNO = Integer.valueOf(pattern);
+              pattern = arr[(SERIALNO-1)];
+            
+            }
+            //linear search 
+        else            
+            {
+                  for ( int j = 1 ; j <=arr.length ; j ++ )
+                  {
+                     if (pattern==arr[j-1])  SERIALNO= j ;
+                  }
+            }
+
+        System.out.println("TO KNOW ABOUT "+pattern+" , ENTER 'KNOW'");
+        System.out.println("TO GET EXAMPLE ABOUT "+pattern+", ENTER 'EXAMPLE'");
+        System.out.println("TO DRAW A "+pattern+" , ENTER 'DRAW'");
+        choice=(as.next()).toUpperCase();
+       
+    }
+
+
+    public static void ACTIONMISSPELT ()
+    {   
         System.out.println("TO KNOW ABOUT "+pattern+" , ENTER 'KNOW'");
         System.out.println("TO GET EXAMPLE ABOUT "+pattern+", ENTER 'EXAMPLE'");
         System.out.println("TO DRAW A "+pattern+" , ENTER 'DRAW'");
@@ -35,7 +71,7 @@ public class PATTERN
         }
                 break;
         
-
+            
             default:
             {
             System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
@@ -43,7 +79,7 @@ public class PATTERN
             String choice2=(as.next()).toUpperCase();
             if ( choice2 == "RETRY")
             {
-                //GET THE CONTROL BACK WITH AGAIN ADDED 
+                //GET THE CONTROL BACK TO ACTION MISSPELT
             }
 
             else 
@@ -54,7 +90,7 @@ public class PATTERN
             }
         }
                 break;
-        }
+        }REPEAT();
         
         
     }
@@ -85,6 +121,7 @@ switch (pattern) {
     }
         break;
 }
+REPEAT();
     }
 
     public static void DRAW(String pattern)
@@ -114,7 +151,7 @@ switch (pattern) {
                 }
             }
                 break;
-        }
+        }REPEAT();
     }
 
     public static void CHOICE(String choice)
