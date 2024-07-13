@@ -3,29 +3,20 @@ import java.util.*;                               //use equal ignore case and al
 public class PATTERN
 {
     static String pattern;
+    static int i = 1; // IT IS USED AS A COUNTER VARIABLE SO THAT THE CODE CAN WELCOME U ONCE ONLY AND THEN MAY NOT IRRITATE THE USER BY SHOWING THE WELCOME SIGN AGAIN AND AGAIN 
     static String choice;
     static Scanner as = new Scanner( System.in);
-    static String arr[]= { "PYRAMID PATTERN","RIGHT HALF PYRAMID PATTERN", "LEFT HALF PYRAMID PATTERN" , "CHARACTER HALF PYRAMID PATTERN" , "ALPHABETS HALF PYRAMID PATTERN" ,"NUMBERS HALF PYRAMID PATTERN", "NUMBERS HALF INVERTED PYRAMID PATTERN" , "FLYOD'S TRIANGLE PATTERN"  , "0-1 TRIANGLE PATTERN", "HOLLOW RECTANGLE PATTERN" , " HOLLOW RHOMBUS PATTERN" ,  "SOLID RHOMBUS PATTERN" , "BUTTERFLY PATTERN" , "DIAMOND PATTERN" , "SAME NUMBERS IN VERTICAL PYRAMID PATTERN" ,""};
+    static String arr[]= { "PYRAMID PATTERN","RIGHT HALF PYRAMID PATTERN", "LEFT HALF PYRAMID PATTERN" , "CHARACTER HALF PYRAMID PATTERN" , "ALPHABETS HALF PYRAMID PATTERN" ,"NUMBERS HALF PYRAMID PATTERN", "NUMBERS HALF INVERTED PYRAMID PATTERN" , "FLYOD'S TRIANGLE PATTERN"  , "0-1 TRIANGLE PATTERN", "HOLLOW RECTANGLE PATTERN" , "HOLLOW RHOMBUS PATTERN" ,  "SOLID RHOMBUS PATTERN" , "BUTTERFLY PATTERN" , "DIAMOND PATTERN" , "SAME NUMBERS IN VERTICAL PYRAMID PATTERN" ,""};
     static int SERIALNO;
 
    public static void welcome ()
-    {   int i = 1; 
-        if( i==1)
-        {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-        System.out.println("WELCOME TO FUN TO PATTERNS \nHERE IS THE LIST OF THE PATTENS U CAN CHOOSE TO KNOW ABOUT OR GET AN EXAMPLE OR DRAW OF DESIRED SIZE");
-        i++;
-        }
-
-        else
-        {
-            System.out.println("CHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); i++;
-        }
+    {   
+         if ( i>1){
+    System.out.println("CHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); }
+        
 
         System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW RECTANGLE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
+        System.out.println();
 
         System.out.println("ENTER THE NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
         pattern=(as.nextLine()).toUpperCase();
@@ -48,8 +39,8 @@ public class PATTERN
         System.out.println("TO KNOW ABOUT "+pattern+" , ENTER 'KNOW'");
         System.out.println("TO GET EXAMPLE ABOUT "+pattern+", ENTER 'EXAMPLE'");
         System.out.println("TO DRAW A "+pattern+" , ENTER 'DRAW'");
-        choice=(as.next()).toUpperCase();
-       
+        choice=(as.nextLine()).toUpperCase();
+      i++; 
     }
 
 
@@ -58,7 +49,7 @@ public class PATTERN
         System.out.println("TO KNOW ABOUT "+pattern+" , ENTER 'KNOW'");
         System.out.println("TO GET EXAMPLE ABOUT "+pattern+", ENTER 'EXAMPLE'");
         System.out.println("TO DRAW A "+pattern+" , ENTER 'DRAW'");
-        choice=(as.next()).toUpperCase();
+        choice=(as.nextLine()).toUpperCase();
        
     }
 
@@ -70,7 +61,7 @@ public class PATTERN
         System.out.println("PLEASE NOW ENTER THE CORRECT NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
         pattern=(as.nextLine()).toUpperCase();
 
-        if(pattern == "1" ||pattern == "2" ||pattern == "3" ||pattern == "4" ||pattern == "5" ||pattern == "6" ||pattern == "7" || pattern == "8" ||pattern == "9" ||pattern == "10" ||pattern == "11" ||pattern == "12" ||pattern == "13" ||pattern == "14" ||pattern == "15"  )
+        if(pattern.equalsIgnoreCase("1") ||pattern.equalsIgnoreCase("2")||pattern.equalsIgnoreCase("3") ||pattern.equalsIgnoreCase("4") ||pattern.equalsIgnoreCase("5") ||pattern.equalsIgnoreCase("6") ||pattern.equalsIgnoreCase("7") || pattern.equalsIgnoreCase("8") ||pattern.equalsIgnoreCase("9")||pattern.equalsIgnoreCase("10") ||pattern.equalsIgnoreCase("11") ||pattern.equalsIgnoreCase("12") ||pattern.equalsIgnoreCase("13") ||pattern.equalsIgnoreCase("14") ||pattern.equalsIgnoreCase("15") )
             {
               SERIALNO = Integer.valueOf(pattern);
               pattern = arr[(SERIALNO-1)];
@@ -81,7 +72,7 @@ public class PATTERN
             {
                   for ( int j = 1 ; j <=arr.length ; j ++ )
                   {
-                     if (pattern==arr[j-1])  SERIALNO= j ;
+                     if (pattern.equalsIgnoreCase(arr[j-1]))  SERIALNO= j ;
                   }
             }
 
@@ -94,24 +85,27 @@ public class PATTERN
         System.out.println("IF YOU WANT TO CONTINUE WITH THE "+pattern+ " ENTER THE ACTION WHICH YOU WANT TO PERFORM NOW");
         System.out.println("ELSE IF YOU WANT TO TRY DIFFERENT PATTERNS NOW ENTER 'LIST' TO SEE THE PATTERNS AVAILABLE");
         System.out.println("OR IF U WANT TO LEAVE ENTER 'EXIT' ");
-        choice=(as.next()).toUpperCase();
-        if(choice=="LIST")
+        choice=(as.nextLine()).toUpperCase();
+
+        if(choice.equalsIgnoreCase("LIST"))
+    {
         welcome();
-        else if (choice == "EXIT")
+    }
+        else if (choice.equalsIgnoreCase("EXIT"))
         {
             System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \n HOPE YOU WILL VIST AGAIN TO PLAY MORE");
                     System.exit(0);
         }
 
-        else if ( choice=="KNOW"||choice=="DRAW"||choice=="EXAMPLE")
+        else if ( choice.equalsIgnoreCase("KNOW")||choice.equalsIgnoreCase("DRAW")||choice.equalsIgnoreCase("EXAMPLE"))
         CHOICE(choice);
 
         else  
         {
             System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
             System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
-            String choice2=(as.next()).toUpperCase();
-            if ( choice2 == "RETRY")
+            String choice2=(as.nextLine()).toUpperCase();
+            if ( choice2.equalsIgnoreCase("RETRY"))
             {
                 welcome(); 
             }
@@ -135,9 +129,9 @@ public class PATTERN
 
                 case 1:
                 {
-                    System.out.println("PYRA"); // write a description here
+                    System.out.println("PYRAMIDD PATTERN:-\nIN THIS PATTERN WE WILL ARRANGE '*' IN FORM OF A TWO DIMENSIONAL EGYPTIAN PYRAMID WHICH ALSO LOOKS LIKE A TRIANGLE AS IT IS A 2D REPRESENTATION ONLY");
                 }break;
-
+ // write a description here
                 
                 // case 2:
                 // {}break;
@@ -195,8 +189,8 @@ public class PATTERN
             {
             System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
             System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
-            String choice2=(as.next()).toUpperCase();
-            if ( choice2 == "RETRY")
+            String choice2=(as.nextLine()).toUpperCase();
+            if ( choice2.equalsIgnoreCase( "RETRY"))
             {
                 PATTERNMISSPELT();
             }
@@ -223,12 +217,13 @@ switch (SERIALNO)
    
     case 1:
     {   System.out.println("EXAMPLES:");
+    for (int j = 2; j <=5 ;j =j+2)
+    {
         System.out.println("THIS IS A "+pattern+ "OF SIZE 3");
-        DRAW(1,3); 
-
-        System.out.println("THIS IS A "+pattern+ "OF SIZE 3");
-        DRAW(1,5); 
- }
+        DRAW(1,j+1); 
+    }
+       
+    }
     break;
 
     // case 2:
@@ -299,8 +294,8 @@ switch (SERIALNO)
     {
         System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
         System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
-        String choice2=(as.next()).toUpperCase();
-        if ( choice2 == "RETRY")
+        String choice2=(as.nextLine()).toUpperCase();
+        if ( choice2.equalsIgnoreCase( "RETRY"))
         {
             PATTERNMISSPELT();
         }
@@ -399,8 +394,8 @@ REPEATS();
             {
                 System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
                 System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
-                String choice2=(as.next()).toUpperCase();
-                if ( choice2 == "RETRY")
+                String choice2=(as.nextLine()).toUpperCase();
+                if ( choice2.equalsIgnoreCase( "RETRY"))
                 {
                     PATTERNMISSPELT();}
     
@@ -421,16 +416,17 @@ REPEATS();
 
     public static void CHOICE(String choice)
     {
-        if ( choice =="KNOW")
+        if ( choice.equalsIgnoreCase("KNOW"))
         KNOW(SERIALNO);
 
-        else if ( choice == "EXAMPLE")
+        else if (choice.equalsIgnoreCase("EXAMPLE"))
         EXAMPLE(SERIALNO);
 
-        else if (choice == "DRAW")
+        else if (choice.equalsIgnoreCase("DRAW"))
         {
             System.out.println("PLEASE ENTER THE SIZE OF "+pattern+" YOU WANT TO BE CREATED");
             int siz=as.nextInt();
+            as.nextLine(); // Consume the leftover newline character
             DRAW(SERIALNO,siz);
         }
         
@@ -438,14 +434,14 @@ REPEATS();
         else 
         System.out.println("YOU HAVE EITHER MISSPELT THE ACTION OR ENTERED A WRONG ACTION TO BE PERFORMED ON "+pattern);
         System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
-                String choice2=(as.next()).toUpperCase();
-                if ( choice2 == "RETRY")
+                String choice2=(as.nextLine()).toUpperCase();
+                if ( choice2.equalsIgnoreCase( "RETRY"))
                 {
                     ACTIONMISSPELT();
                 }
                  else 
                 {
-                    System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \n HOPE YOU WILL VIST AGAIN TO PLAY MORE");
+                    System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \nHOPE YOU WILL VIST AGAIN TO PLAY MORE");
                     System.exit(0);
                     
                 }
@@ -456,6 +452,7 @@ REPEATS();
 
     public static void main(String[] args) 
     {
+        System.out.println("WELCOME TO FUN TO PATTERNS \nHERE IS THE LIST OF THE PATTENS U CAN CHOOSE TO KNOW ABOUT OR GET AN EXAMPLE OR DRAW OF DESIRED SIZE");
     welcome();
     CHOICE(choice);
     }
