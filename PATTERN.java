@@ -338,56 +338,101 @@ REPEATS();
             break;
 
             
-            // case 2:
-            // {}break;
+            case 2:
+            {
+                
+                    for ( int i = 1; i <=size ;i++)
+                    {
+                        for (int j =1 ; j <=i ; j++)
+                        System.out.print("*");
+                        System.out.println();
+                    }
+                
+            }break;
 
             
-            // case 3:
-            // {}break;
+            case 3: 
+            { for ( int i = 1; i <=size ;i++)
+                {
+                    for (int j=1; j <=size-i ; j++)
+                    System.out.print(" ");
+                    
+                    for (int j=1; j <=i ; j++)
+                    System.out.print("*");
+        
+                    System.out.println();
+                }
+            }break;
 
+            //try to do a variation of removing spaces and printing characters from ASCII=1 to counting 
+            case 4:
+            {
+                int ASCII= 65;
+        for ( int i = 1; i <=size ;i++)
+        {
+            for (int j =1 ; j <=i ; j++)
+            {
+                char CHAR= (char)ASCII;
+                System.out.print(CHAR); 
+                ASCII++;
+            }
+            System.out.println();
+
+            }}
+            break;
             
-            // case 4:
-            // {}break;
             
-            
-            // case 5:
-            // {}break;
+            case 5:
+            {         int ASCII= 65;
+                for ( int i = 1; i <=size ;i++)
+                {
+                    for (int j =1 ; j <=i ; j++)
+                    {
+                        char CHAR= (char)ASCII;
+                        System.out.print(CHAR); 
+                        
+                    }
+                    ASCII++;
+                    System.out.println();
+                } 
+
+            }break;
 
            
-            // case 6:
-            // {}break;
+            case 6:
+            {}break;
 
           
-            // case 7:
-            // {}break;
+            case 7:
+            {}break;
 
            
-            // case 8:
-            // {}break;
+            case 8:
+            {}break;
 
            
-            // case 9:
-            // {}break;
+            case 9:
+            {}break;
 
             
-            // case 10:
-            // {}break;
+            case 10:
+            {}break;
             
-            // case 11:
-            // {}break;
+            case 11:
+            {}break;
 
             
-            // case 12:
-            // {}break;
+            case 12:
+            {}break;
             
-            // case 13:
-            // {}break;
+            case 13:
+            {}break;
             
-            // case 14:
-            // {}break;
+            case 14:
+            {}break;
             
-            // case 15:
-            // {}break;
+            case 15:
+            {}break;
         
 
             default:
