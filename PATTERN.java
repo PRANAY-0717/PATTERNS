@@ -1,21 +1,21 @@
 package PATTERNS;
 import java.util.*;                               //use equal ignore case and all set 
-public class PATTERN
+public class PATTERN //welcome to mac
 {
     static String pattern;
     static int i = 1; // IT IS USED AS A COUNTER VARIABLE SO THAT THE CODE CAN WELCOME U ONCE ONLY AND THEN MAY NOT IRRITATE THE USER BY SHOWING THE WELCOME SIGN AGAIN AND AGAIN 
     static String choice;
     static Scanner as = new Scanner( System.in);
-    static String arr[]= { "PYRAMID PATTERN","RIGHT HALF PYRAMID PATTERN", "LEFT HALF PYRAMID PATTERN" , "CHARACTER HALF PYRAMID PATTERN" , "ALPHABETS HALF PYRAMID PATTERN" ,"NUMBERS HALF PYRAMID PATTERN", "NUMBERS HALF INVERTED PYRAMID PATTERN" , "FLYOD'S TRIANGLE PATTERN"  , "0-1 TRIANGLE PATTERN", "HOLLOW RECTANGLE PATTERN" , "HOLLOW RHOMBUS PATTERN" ,  "SOLID RHOMBUS PATTERN" , "BUTTERFLY PATTERN" , "DIAMOND PATTERN" , "SAME NUMBERS IN VERTICAL PYRAMID PATTERN" ,""};
+    static String arr[]= { "PYRAMID PATTERN","RIGHT HALF PYRAMID PATTERN", "LEFT HALF PYRAMID PATTERN" , "CHARACTER HALF PYRAMID PATTERN" , "ALPHABETS HALF PYRAMID PATTERN" ,"NUMBERS HALF PYRAMID PATTERN", "NUMBERS HALF INVERTED PYRAMID PATTERN" , "FLYOD'S TRIANGLE PATTERN"  , "0-1 TRIANGLE PATTERN", "HOLLOW SQUARE PATTERN" , "HOLLOW RHOMBUS PATTERN" ,  "SOLID RHOMBUS PATTERN" , "BUTTERFLY PATTERN" , "DIAMOND PATTERN" , "SAME NUMBERS IN VERTICAL PYRAMID PATTERN"};
     static int SERIALNO;
 
    public static void welcome ()
     {   
-         if ( i>1){
+         if ( i>1){{
     System.out.println("CHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); }
-        
+         }
 
-        System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW RECTANGLE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
+        System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW SQUARE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
         System.out.println();
 
         System.out.println("ENTER THE NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
@@ -56,7 +56,7 @@ public class PATTERN
 
     public static void PATTERNMISSPELT()
     {
-        System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW RECTANGLE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
+        System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW SQUARE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
 
         System.out.println("PLEASE NOW ENTER THE CORRECT NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
         pattern=(as.nextLine()).toUpperCase();
@@ -79,6 +79,8 @@ public class PATTERN
 
 
     }
+
+
 
     public static void REPEATS()
     {
@@ -131,58 +133,58 @@ public class PATTERN
                 {
                     System.out.println("PYRAMIDD PATTERN:-\nIN THIS PATTERN WE WILL ARRANGE '*' IN FORM OF A TWO DIMENSIONAL EGYPTIAN PYRAMID WHICH ALSO LOOKS LIKE A TRIANGLE AS IT IS A 2D REPRESENTATION ONLY");
                 }break;
- // write a description here
-                
-                // case 2:
-                // {}break;
 
                 
-                // case 3:
-                // {}break;
+                case 2:
+                {}break;
 
                 
-                // case 4:
-                // {}break;
+                case 3:
+                {}break;
+
+                
+                case 4:
+                {}break;
                 
                 
-                // case 5:
-                // {}break;
+                case 5:
+                {}break;
 
                
-                // case 6:
-                // {}break;
+                case 6:
+                {}break;
 
               
-                // case 7:
-                // {}break;
+                case 7:
+                {}break;
 
                
-                // case 8:
-                // {}break;
+                case 8:
+                {}break;
 
                
-                // case 9:
-                // {}break;
+                case 9:
+                {}break;
 
                 
-                // case 10:
-                // {}break;
+                case 10:
+                {}break;
                 
-                // case 11:
-                // {}break;
+                case 11:
+                {}break;
 
                 
-                // case 12:
-                // {}break;
+                case 12:
+                {}break;
                 
-                // case 13:
-                // {}break;
+                case 13:
+                {}break;
                 
-                // case 14:
-                // {}break;
+                case 14:
+                {}break;
                 
-                // case 15:
-                // {}break;
+                case 15:
+                {}break;
                 
                           
             default:
@@ -217,78 +219,129 @@ switch (SERIALNO)
    
     case 1:
     {   System.out.println("EXAMPLES:");
-    for (int j = 2; j <=5 ;j =j+2)
+System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+    DRAW(1,7);
+       }
+    break;
+
+    case 2:
     {
-        System.out.println("THIS IS A "+pattern+ "OF SIZE 3");
-        DRAW(1,j+1); 
+        System.out.println("EXAMPLES:");
+System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+     DRAW(2,7);
     }
-       
+    break;
+   
+    case 3:    
+    {
+        System.out.println("EXAMPLES:");
+System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+DRAW(3,7);
+}
+    break;
+
+    case 4:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(4,7);
+    }  
+    break;
+    
+    
+    case 5:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(5,7);
     }
     break;
 
-    // case 2:
-    // {
-        
-    //     DRAW()}
-    // break;
    
-    // case 3:    
-    // {DRAW()}
-    // break;
-
-    // case 4:
-    // {DRAW()}
-    // break;
-    
-    
-    // case 5:
-    // {DRAW()}
-    // break;
-
-   
-    // case 6:
-    // {DRAW()}
-    // break;
+    case 6:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(6,7);
+    }
+    break;
 
   
-    // case 7:
-    // {DRAW()}
-    // break;
+    case 7:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(7,7);
+    }
+    break;
 
    
-    // case 8:
-    // {}break;
+    case 8:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(8,7);
+    }
+    {}break;
 
    
-    // case 9:
-    // {DRAW()}
-    // break;
+    case 9:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(9,7);
+    }
+    break;
 
     
-    // case 10:
-    // {DRAW()}
-    // break;
+    case 10:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(10,7);
+    }
+    break;
     
-    // case 11:
-    // {DRAW()}
-    // break;
+    case 11:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(11,7);
+    }
+    break;
 
     
-    // case 12:
-    // {DRAW()}
-    // break;
+    case 12:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(12,7);
+    }
+    break;
     
-    // case 13:
-    // {DRAW()}
-    // break;
+    case 13:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(13,7);
+    }
+    break;
     
-    // case 14:
-    // {DRAW()}
-    // break;
+    case 14:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(14,7);
+    }
+    break;
     
-    // case 15:
-    // {DRAW()}
-    // break;
+    case 15:
+    {
+        System.out.println("EXAMPLES:");
+        System.out.println("THIS IS A "+ pattern+ " OF SIZE = 7");
+        DRAW(15,7);
+    }
+    break;
 
     default:
     {
@@ -400,39 +453,169 @@ REPEATS();
 
            
             case 6:
-            {}break;
+            {
+               for ( int i = 1 ; i <=size ; i ++)
+               {
+                for ( int j = 1; j <=i ; j ++)
+                System.out.print(i);
+               }
+               System.out.println();
+            }
+            break;
 
           
             case 7:
-            {}break;
+            {
+                for ( int i = 1 ;  i <=size ; i ++)
+                {
+                    for ( int j =size-i+1; j >= 0 ; j--)
+                    System.out.print(i);
+                }
+                System.out.println();
+            }
+            break;
 
            
             case 8:
-            {}break;
+            {  int k =1 ;
+                for (int i = 1; i<=size ; i ++)
+                {
+                    for ( int j = 1 ;j <=i; j++  )
+                    System.out.print(k++);
+                }
+            }break;
 
            
             case 9:
-            {}break;
+            {
+              for ( int i =1 ; i <=size ; i ++)
+              {
+                for ( int j = 1; j <=i ; j ++)
+                {
+                    if ((i+j)%2 ==0 ) System.out.print(1);
+                    else System.out.print(0);
+                }
+                System.out.println();
+              }
+            }
+            break;
 
             
             case 10:
-            {}break;
+            {   
+                for ( int i =1; i <=size ; i ++)
+                {
+                    for ( int j =1; j <=size; j ++ )
+                    {
+                        if ( i==1 || i ==size || j ==1 ||j ==size )
+                        System.out.print("*");
+                    }
+                    System.out.println();
+                }
+            }
+            break;
             
             case 11:
-            {}break;
+            {
+                for( int i =1 ; i <=size ; i ++)
+                {
+                  for ( int j = 1 ; j <=(size-i) ; j++)
+                  System.out.print(" ");
+  
+                  for ( int j =1; j <=size ; j++)
+                  {
+                      if ( i==1 || i ==size || j ==1 ||j ==size )
+                          System.out.print("*");
+                  }
+  
+                  System.out.println();
+                } 
+            }
+            break;
 
             
             case 12:
-            {}break;
+            {
+               for( int i =1 ; i <=size ; i ++)
+              {
+                for ( int j = 1 ; j <=(size-i) ; j++)
+                System.out.print(" ");
+
+                for ( int j =1; j <=size ; j++)
+                {
+                     System.out.print("*");
+                }
+
+                System.out.println();
+              } 
+            }
+            break;
             
             case 13:
-            {}break;
+            {
+                for ( int i = 1 ; i <=size ; i ++)
+                {
+                    for (int j =1 ; j<=i ; j ++)
+                    System.out.print("*");
+                
+
+                for ( int j = 1 ; j <=((size*2)-(i*2)) ; j ++)
+                System.out.print(" ");
+                 
+                for (int j =1 ; j<=i ; j ++)
+                    System.out.print("*");
+
+                    System.out.println();
+            }
+              
+            for ( int i = size ; i >=1 ; i --)
+                {
+                    for (int j =i ; j>=1 ; j --)
+                    System.out.print("*");
+                
+
+                    for ( int j = 1 ; j <=((size*2)-(i*2)) ; j ++)
+                    System.out.print(" ");
+                     
+                 
+                for (int j =i ; j>=1 ; j --)
+                    System.out.print("*");
+
+                    System.out.println();
+            }
+        }
+            break;
             
             case 14:
-            {}break;
+            {
+              for( int i = 1 ;i<=size ; i++)
+              {
+                for ( int j = 1 ; j<=size-(i) ; j ++)
+                System.out.print(" ");
+                 
+                for ( int j =1 ; j <=((i*2)-1); j++)
+                System.out.print("*");
+
+                System.out.println();
+              }
+
+
+              for( int i = size ;i>=1; i--)
+              {
+                for ( int j = 1 ; j<=size-(i) ; j ++)
+                System.out.print(" ");
+                 
+                for ( int j =1 ; j <=((i*2)-1); j++)
+                System.out.print("*");
+
+                System.out.println();
+              }
+            }
+            break;
             
             case 15:
-            {}break;
+            {}
+            break;
         
 
             default:
