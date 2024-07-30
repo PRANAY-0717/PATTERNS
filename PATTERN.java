@@ -79,16 +79,39 @@ public class PATTERN //welcome to mac
 
 
     }
+//copied directly
 
+    public static boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
 
 
     public static void REPEATS()
     {
+       System.out.println("IF U WANT TO DRAW ANOTHER "+ pattern+ " PLEASE ENTER THE SIZE U WANT TO DRAW ELSE ENTER 'NO'");
+
+        String REDRAW=as.next();
+        if (isNumeric(REDRAW))
+        {   int resize=Integer.valueOf(REDRAW);
+            DRAW(SERIALNO,resize);
+        }
+        else if ( REDRAW.equalsIgnoreCase("NO"))
+        {
+
+        
         System.out.println("IF YOU WANT TO CONTINUE WITH THE "+pattern+ " ENTER THE ACTION WHICH YOU WANT TO PERFORM NOW");
         System.out.println("ELSE IF YOU WANT TO TRY DIFFERENT PATTERNS NOW ENTER 'LIST' TO SEE THE PATTERNS AVAILABLE");
         System.out.println("OR IF U WANT TO LEAVE ENTER 'EXIT' ");
         choice=(as.nextLine()).toUpperCase();
-
+        
         if(choice.equalsIgnoreCase("LIST"))
     {
         welcome();
@@ -101,8 +124,8 @@ public class PATTERN //welcome to mac
 
         else if ( choice.equalsIgnoreCase("KNOW")||choice.equalsIgnoreCase("DRAW")||choice.equalsIgnoreCase("EXAMPLE"))
         CHOICE(choice);
-
-        else  
+    
+         
         {
             System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
             System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
@@ -119,8 +142,27 @@ public class PATTERN //welcome to mac
                 
             }
         }
-
     }
+
+    else
+        {
+        System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
+            System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
+            String choice2=(as.nextLine()).toUpperCase();
+            if ( choice2.equalsIgnoreCase("RETRY"))
+            {
+                welcome(); 
+            }
+
+            else 
+            {
+                System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \n HOPE YOU WILL VIST AGAIN TO PLAY MORE");
+                System.exit(0);
+                
+    }
+ }
+}
+
 
     public static void KNOW(int serialno)
     {
@@ -417,10 +459,11 @@ REPEATS();
                 }
             }break;
 
-            //try to do a variation of removing spaces and printing characters from ASCII=1 to counting 
+            //we have successfuly started the series from ASCII=33 meaning leaving all the spaces and we have also removed all the spaces whcih were coming in between to give a continous look to the pattern (talking abt pattern no. 4)
+
             case 4:
             {
-                int ASCII= 65;
+                int ASCII= 33;
         for ( int i = 1; i <=size ;i++)
         {
             for (int j =1 ; j <=i ; j++)
@@ -428,6 +471,8 @@ REPEATS();
                 char CHAR= (char)ASCII;
                 System.out.print(CHAR); 
                 ASCII++;
+                if (ASCII==127 )
+                ASCII=161;
             }
             System.out.println();
 
@@ -614,7 +659,34 @@ REPEATS();
             break;
             
             case 15:
-            {}
+            {
+                for( int i=1 ; i <= size ;i ++)
+                {
+        
+                  for ( int j = (size - i); j>0 ;j--)
+                  {
+                    System.out.print("  ");
+                  }
+                  if ( i==1)
+                  System.out.print(i);
+                  else
+                  for ( int j = (0-i) ; j <=i ; j++)
+                  {int c =0;//counter variable for counting the times number "1" has been printed
+                  if ( j==1)
+                    {
+                      c++;
+                    }
+                    if(j!=0)
+                    {
+                      if (!( j==1 && c==1))
+                      System.out.print(Math.abs(j)+" ");
+                      
+                    }
+        
+                  }
+                  System.out.println();
+                }                                                                                                          
+            }
             break;
         
 
