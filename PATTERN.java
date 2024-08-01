@@ -12,7 +12,7 @@ public class PATTERN //welcome to mac
    public static void welcome ()
     {   
          if ( i>1){{
-    System.out.println("CHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); }
+    System.out.println("\n\nCHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); }
          }
 
         System.out.println("1-PYRAMID PATTERN \n2-RIGHT HALF PYRAMID PATTERN \n3-LEFT HALF PYRAMID PATTERN \n4-CHARACTER HALF PYRAMID PATTERN  \n5-ALPHABETS HALF PYRAMID PATTERN \n6-NUMBERS HALF PYRAMID PATTERN \n7-NUMBERS HALF INVERTED PYRAMID PATTERN \n8-FLYOD'S TRIANGLE PATTERN \n9-(0-1) TRIANGLE PATTERN\n10-HOLLOW SQUARE PATTERN \n11-HOLLOW RHOMBUS PATTERN \n12-SOLID RHOMBUS PATTERN \n13-BUTTERFLY PATTERN \n14-DIAMOND PATTERN\n15-SAME NUMBERS IN VERTICAL PYRAMID PATTERN");
@@ -20,6 +20,7 @@ public class PATTERN //welcome to mac
 
         System.out.println("ENTER THE NAME OR THE SERIAL NUMBER OF THE PATTERN YOU ARE INTERESTED IN");
         pattern=(as.nextLine()).toUpperCase();
+        
         
         if(pattern.equalsIgnoreCase("1") ||pattern.equalsIgnoreCase("2")||pattern.equalsIgnoreCase("3") ||pattern.equalsIgnoreCase("4") ||pattern.equalsIgnoreCase("5") ||pattern.equalsIgnoreCase("6") ||pattern.equalsIgnoreCase("7") || pattern.equalsIgnoreCase("8") ||pattern.equalsIgnoreCase("9")||pattern.equalsIgnoreCase("10") ||pattern.equalsIgnoreCase("11") ||pattern.equalsIgnoreCase("12") ||pattern.equalsIgnoreCase("13") ||pattern.equalsIgnoreCase("14") ||pattern.equalsIgnoreCase("15") )
             {
@@ -76,10 +77,10 @@ public class PATTERN //welcome to mac
                   }
             }
 
-
+            as.nextLine();
 
     }
-//copied directly
+//copied directly FROM INTERNET (LOL US PROGRAMMERS)
 
     public static boolean isNumeric(String strNum) {
         if (strNum == null) {
@@ -96,9 +97,10 @@ public class PATTERN //welcome to mac
 
     public static void REPEATS()
     {
-       System.out.println("IF U WANT TO DRAW ANOTHER "+ pattern+ " PLEASE ENTER THE SIZE U WANT TO DRAW ELSE ENTER 'NO'");
+       System.out.println("IF U WANT TO DRAW "+ pattern+ " PLEASE ENTER THE SIZE U WANT TO DRAW ELSE ENTER 'NO'");
 
         String REDRAW=as.next();
+        as.nextLine();
         if (isNumeric(REDRAW))
         {   int resize=Integer.valueOf(REDRAW);
             DRAW(SERIALNO,resize);
@@ -119,10 +121,12 @@ public class PATTERN //welcome to mac
         else if (choice.equalsIgnoreCase("EXIT"))
         {
             System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \n HOPE YOU WILL VIST AGAIN TO PLAY MORE");
+            as.nextLine();
                     System.exit(0);
         }
 
         else if ( choice.equalsIgnoreCase("KNOW")||choice.equalsIgnoreCase("DRAW")||choice.equalsIgnoreCase("EXAMPLE"))
+        as.nextLine();
         CHOICE(choice);
     
          
@@ -142,6 +146,7 @@ public class PATTERN //welcome to mac
                 
             }
         }
+        as.nextLine();
     }
 
     else
@@ -167,68 +172,84 @@ public class PATTERN //welcome to mac
     public static void KNOW(int serialno)
     {
         switch (serialno) 
-        {       
-        //give description about all the patterns here by repeating the cases 
-          
+        {
 
-                case 1:
-                {
-                    System.out.println("PYRAMIDD PATTERN:-\nIN THIS PATTERN WE WILL ARRANGE '*' IN FORM OF A TWO DIMENSIONAL EGYPTIAN PYRAMID WHICH ALSO LOOKS LIKE A TRIANGLE AS IT IS A 2D REPRESENTATION ONLY");
-                }break;
-
-                
-                case 2:
-                {}break;
-
-                
-                case 3:
-                {}break;
-
-                
-                case 4:
-                {}break;
-                
-                
-                case 5:
-                {}break;
-
-               
-                case 6:
-                {}break;
-
-              
-                case 7:
-                {}break;
-
-               
-                case 8:
-                {}break;
-
-               
-                case 9:
-                {}break;
-
-                
-                case 10:
-                {}break;
-                
-                case 11:
-                {}break;
-
-                
-                case 12:
-                {}break;
-                
-                case 13:
-                {}break;
-                
-                case 14:
-                {}break;
-                
-                case 15:
-                {}break;
-                
-                          
+            case 1:
+            {
+                System.out.println("PYRAMID PATTERN:\nIn this pattern, we will arrange '*' in the form of a two-dimensional Egyptian pyramid, which also looks like a triangle since it is a 2D representation.");
+            } break;
+            
+            case 2:
+            {
+                System.out.println("RIGHT HALF PYRAMID PATTERN:\nIn this pattern, we will arrange '*' in the form of the right half of a complete pyramid, which can also look like a right-angle triangle with its hypotenuse pointing outward to the top right of the screen.");
+            } break;
+            
+            case 3:
+            {
+                System.out.println("LEFT HALF PYRAMID PATTERN:\nIn this pattern, we will arrange '*' in the form of the left half of a complete pyramid, which can also look like a right-angle triangle with its hypotenuse pointing outward to the top right of the display.");
+            } break;
+            
+            case 4:
+            {
+                System.out.println("CHARACTER HALF PYRAMID PATTERN:\nIn this pattern, we will make a half pyramid that looks like a right-angled triangle with its hypotenuse pointing outward to the top right side of the screen. This pattern will be printed with a mix of special characters, letters, and digits, excluding spaces.");
+            } break;
+            
+            case 5:
+            {
+                System.out.println("ALPHABETS HALF PYRAMID PATTERN:\nIn this pattern, we will make a half pyramid that looks like a right-angled triangle with its hypotenuse pointing outward to the top right side of the screen. This pattern will be printed using alphabets, either in lowercase or uppercase letters.");
+            } break;
+            
+            case 6:
+            {
+                System.out.println("NUMBERS HALF PYRAMID PATTERN:\nIn this pattern, we will make a half pyramid that looks like a right-angled triangle with its hypotenuse pointing outward to the top right side of the screen. This pattern will be printed with numbers starting from 1, and the number on each line will represent the line number, printing the same amount as that digit specifies.");
+            } break;
+            
+            case 7:
+            {
+                System.out.println("NUMBERS HALF INVERTED PYRAMID PATTERN:\nIn this pattern, we will make a half pyramid of a full pyramid inverted up and down, which will look like a right-angled triangle with its hypotenuse pointing to the bottom right side of the screen. This pattern will be printed with numbers, and the number on each line will represent the line number. The amount of times that number will be printed will be equal to (total number of lines - line number).");
+            } break;
+            
+            case 8:
+            {
+                System.out.println("FLOYD'S TRIANGLE PATTERN:\nIn this pattern, we will draw Floyd's triangle. A Floyd triangle is a pattern where numbers are arranged in a triangle. You start with the number 1 at the top. Below it, you place the next numbers in sequence, with each row having one more number than the previous row. The first row has one number, the second row has two numbers, the third row has three numbers, and so on.");
+            } break;
+            
+            case 9:
+            {
+                System.out.println("0-1 TRIANGLE PATTERN:\nIn this pattern, we will draw a half pyramid pattern that looks like a right-angled triangle with its hypotenuse pointing to the top right side of the screen. It will be printed with the digits '0' and '1' only, and each line will end with the digit '1'. Each line will print '0' and '1' exactly the same number of times as the line number.");
+            } break;
+            
+            case 10:
+            {
+                System.out.println("HOLLOW SQUARE PATTERN:\nIn this pattern, we will arrange '*' in the form of a hollow square of the size or side length entered by the user.");
+            } break;
+            
+            case 11:
+            {
+                System.out.println("HOLLOW RHOMBUS PATTERN:\nIn this pattern, we will arrange '*' in the form of a hollow rhombus of the size or side length entered by the user.");
+            } break;
+            
+            case 12:
+            {
+                System.out.println("SOLID RHOMBUS PATTERN:\nIn this pattern, we will arrange '*' in the form of a solid rhombus or a completely filled rhombus of the size or side length entered by the user.");
+            } break;
+            
+            case 13:
+            {
+                System.out.println("BUTTERFLY PATTERN:\nIn this pattern, we will arrange '*' in the form of a butterfly with its wings open on the sides of its body, creating the illustration of a top view, showing its wings and a straight line-shaped body. The size of the butterfly will be determined by the size entered by the user.");
+            } break;
+            
+            case 14:
+            {
+                System.out.println("DIAMOND PATTERN:\nIn this pattern, we will arrange '*' in the form of a diamond of the size or length of the larger diagonal entered by the user.");
+            } break;
+            
+            case 15:
+            {
+                System.out.println("SAME NUMBERS IN VERTICAL PYRAMID PATTERN:\nIn this pattern, we will print a full pyramid that resembles an equilateral triangle made up of numbers. This pattern will be printed with the help of numbers, with each vertical line containing the same digit. The middle vertical line will be the first, and the vertical lines next to it will be counted as the second, third, etc., depending on whether they are on the left or right side of the pyramid.");
+            } break;
+         
+                     
             default:
             {
             System.out.println("PLEASE SEE FOR ANY MISSPELT OR ANY NON EXISTING CHOICE IS ENTERED");
@@ -247,6 +268,8 @@ public class PATTERN //welcome to mac
             }
         }
                 break;
+
+                
         }
         
         REPEATS();
@@ -411,8 +434,10 @@ REPEATS();
    
     public static void DRAW(int serialno,int size)
     {
+        if (size >60) System.out.println("PLEASE MINIMIZE THE TERMINAL FOR BETTER VIEW OF THE PATTERN");
         switch (serialno) 
         {
+
            
             case 1:
             {
@@ -503,8 +528,9 @@ REPEATS();
                {
                 for ( int j = 1; j <=i ; j ++)
                 System.out.print(i);
+                System.out.println();
                }
-               System.out.println();
+               
             }
             break;
 
@@ -515,8 +541,10 @@ REPEATS();
                 {
                     for ( int j =size-i+1; j >= 0 ; j--)
                     System.out.print(i);
+
+                    System.out.println();
                 }
-                System.out.println();
+              
             }
             break;
 
@@ -527,6 +555,8 @@ REPEATS();
                 {
                     for ( int j = 1 ;j <=i; j++  )
                     System.out.print(k++);
+
+                    System.out.println();
                 }
             }break;
 
@@ -732,6 +762,7 @@ REPEATS();
         
 
         else 
+        {
         System.out.println("YOU HAVE EITHER MISSPELT THE ACTION OR ENTERED A WRONG ACTION TO BE PERFORMED ON "+pattern);
         System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
                 String choice2=(as.nextLine()).toUpperCase();
@@ -745,7 +776,7 @@ REPEATS();
                     System.exit(0);
                     
                 }
-        
+            }
     }
 
 
@@ -755,7 +786,9 @@ REPEATS();
         System.out.println("WELCOME TO FUN TO PATTERNS \nHERE IS THE LIST OF THE PATTENS U CAN CHOOSE TO KNOW ABOUT OR GET AN EXAMPLE OR DRAW OF DESIRED SIZE");
     welcome();
     CHOICE(choice);
+    
     }
+  
     }
 
 
