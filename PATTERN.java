@@ -1,6 +1,6 @@
 package PATTERNS;
-import java.util.*;                               //use equal ignore case and all set 
-public class PATTERN //welcome to mac
+import java.util.*;                              
+public class PATTERN
 {
     static String pattern;
     static int i = 1; // IT IS USED AS A COUNTER VARIABLE SO THAT THE CODE CAN WELCOME U ONCE ONLY AND THEN MAY NOT IRRITATE THE USER BY SHOWING THE WELCOME SIGN AGAIN AND AGAIN 
@@ -11,7 +11,7 @@ public class PATTERN //welcome to mac
 
    public static void welcome ()
     {   
-         if ( i>1){{
+         if ( i>1){{System.out.println();
     System.out.println("\n\nCHOOSE THE NEXT PATTERN YOU WANT TO PLAY WITH"); }
          }
 
@@ -782,7 +782,7 @@ REPEATS();
 
 
     public static void main(String[] args) 
-    {
+    {System.out.println();System.out.println();
         System.out.println("WELCOME TO FUN TO PATTERNS \nHERE IS THE LIST OF THE PATTENS U CAN CHOOSE TO KNOW ABOUT OR GET AN EXAMPLE OR DRAW OF DESIRED SIZE");
     welcome();
     CHOICE(choice);
