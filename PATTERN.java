@@ -51,6 +51,8 @@ public class PATTERN
         System.out.println("TO GET EXAMPLE ABOUT "+pattern+", ENTER 'EXAMPLE'");
         System.out.println("TO DRAW A "+pattern+" , ENTER 'DRAW'");
         choice=(as.nextLine()).toUpperCase();
+        CHOICE(choice);
+        as.nextLine();
        
     }
 
@@ -583,7 +585,9 @@ REPEATS();
                     for ( int j =1; j <=size; j ++ )
                     {
                         if ( i==1 || i ==size || j ==1 ||j ==size )
-                        System.out.print("*");
+                        System.out.print("* ");
+                        else 
+                        System.out.print("  ");
                     }
                     System.out.println();
                 }
@@ -600,7 +604,9 @@ REPEATS();
                   for ( int j =1; j <=size ; j++)
                   {
                       if ( i==1 || i ==size || j ==1 ||j ==size )
-                          System.out.print("*");
+                          System.out.print("* ");
+                          else 
+                        System.out.print("  ");
                   }
   
                   System.out.println();
@@ -618,7 +624,7 @@ REPEATS();
 
                 for ( int j =1; j <=size ; j++)
                 {
-                     System.out.print("*");
+                     System.out.print("* ");
                 }
 
                 System.out.println();
@@ -766,16 +772,20 @@ REPEATS();
         System.out.println("YOU HAVE EITHER MISSPELT THE ACTION OR ENTERED A WRONG ACTION TO BE PERFORMED ON "+pattern);
         System.out.println("IF YOU WANT TO CONTINUE PLEASE ENTER 'RETRY' ELSE ENTER 'EXIT' TO LEAVE");
                 String choice2=(as.nextLine()).toUpperCase();
+                
                 if ( choice2.equalsIgnoreCase( "RETRY"))
                 {
+                    
                     ACTIONMISSPELT();
                 }
                  else 
                 {
+                    as.nextLine();
                     System.out.println("THANK YOU FOR ENTERING IN FUN WITH PATTERNS \nHOPE YOU WILL VIST AGAIN TO PLAY MORE");
                     System.exit(0);
                     
                 }
+
             }
     }
 

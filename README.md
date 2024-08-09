@@ -30,7 +30,7 @@ Compile the cloned code by simply pasting this command into the terminal:
 <br>
 Finally, run the code by simply pasting this command into the terminal:
 <br>
-<code>java PATTERN</code> then follow the menu displayed on your terminal screen and enjoy the patterns!<br>
+<code>java PATTERN.java</code> then follow the menu displayed on your terminal screen and enjoy the patterns!<br>
 <br>
 <h2>🤝 Contributions</h2><br>
 I am open to any pull requests you may have. As a newcomer to the coding world, I am eager to learn from your suggestions and improvements.<br>
